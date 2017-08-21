@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Engine
+namespace Onyx.Engine
 {
-    public class Class1
+    class Collider
     {
     }
 }
