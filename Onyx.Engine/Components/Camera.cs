@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Onyx.Engine
+namespace Onyx.Engine.Components
 {
-    public class Camera : IComponent
+    public class Camera : Component
     {
         public float nearClipPlane = 0.1f;
         public float farClipPlane = 100.0f;

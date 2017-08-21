@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Onyx.Engine
 {
-    public abstract class IComponent
+    public abstract class Component
     {
-        public Entity Parent { get; set; }
+        public Entity entity { get; set; }
         public abstract void Update();
     }
 }

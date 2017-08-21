@@ -17,6 +17,7 @@ using Matrix = Onyx.Engine.Matrix;
 using Color4 = Onyx.Engine.Color4;
 using Vector4 = Onyx.Engine.Color4;
 using SharpDX.Mathematics.Interop;
+using Onyx.Engine.Components;
 
 namespace Onyx.Engine
 {
