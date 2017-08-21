@@ -13,7 +13,7 @@ namespace Onyx.Engine
         public float aspect;
         public Matrix projectionMatrix;
         public Rectangle location;
-        public void Update()
+        public override void Update()
         {
             Matrix.PerspectiveFovLH((float)Math.PI / 4.0f, Screen.Width / (float)Screen.Height, nearClipPlane, farClipPlane, out projectionMatrix);
         }

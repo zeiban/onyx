@@ -9,7 +9,7 @@ namespace Onyx.Engine
     public class Transform : IComponent
     {
         private Matrix localMatrix;
-        private Matrix worldMatrix;
+        public  Matrix worldMatrix;
         private Transform parent = null;
         public Transform Parent
         {
@@ -29,7 +29,7 @@ namespace Onyx.Engine
         public Vector3 position;
         public Vector3 rotation;
         public List<Transform> children = new List<Transform>();
-        public void Update()
+        public override void Update()
         {
  //           Quaternion qx = new Quaternion
  //           Matrix mt = Matrix. 
