@@ -165,7 +165,7 @@ namespace Onyx.Engine
             return true;
         }
 
-        public void Update(Camera camera)
+        public void Update(Entity camera)
         {
             if (userResized)
             {
@@ -219,9 +219,9 @@ namespace Onyx.Engine
             }
             swapChain.Present(0, PresentFlags.None);
             Matrix.Translation(0.0f, 0.0f, 5.0f, out viewMatrix);
-            camera.Update();
+            Camera.Current.Update();
 //            Matrix.Multiply(ref camera.Parent.transform.worldMatrix, ref camera.projectionMatrix, out viewProjMatrix);
-            Matrix.Multiply(ref viewMatrix, ref camera.projectionMatrix, out viewProjMatrix);
+            Matrix.Multiply(ref viewMatrix, ref Camera.Current.projectionMatrix, out viewProjMatrix);
             context.ClearDepthStencilView(depthView, DepthStencilClearFlags.Depth, 1.0f, 0);
             context.ClearRenderTargetView(renderView, Color.Black);
 

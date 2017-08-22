@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.8
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine", "Engine\Engine.csproj", "{97AFD708-DBA9-4A8A-A8A6-622A5BD1BF10}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Editor", "Editor\Editor.csproj", "{26F4AB16-737E-49BA-B3B3-C41BFFFCAADE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Onyx.Engine", "Onyx.Engine\Onyx.Engine.csproj", "{CFBAAA52-E682-4ADF-8848-6895A703B912}"
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{97AFD708-DBA9-4A8A-A8A6-622A5BD1BF10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{97AFD708-DBA9-4A8A-A8A6-622A5BD1BF10}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{97AFD708-DBA9-4A8A-A8A6-622A5BD1BF10}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{97AFD708-DBA9-4A8A-A8A6-622A5BD1BF10}.Release|Any CPU.Build.0 = Release|Any CPU
 		{26F4AB16-737E-49BA-B3B3-C41BFFFCAADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{26F4AB16-737E-49BA-B3B3-C41BFFFCAADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26F4AB16-737E-49BA-B3B3-C41BFFFCAADE}.Release|Any CPU.ActiveCfg = Release|Any CPU

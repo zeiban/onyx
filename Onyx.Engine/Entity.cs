@@ -19,7 +19,7 @@ namespace Onyx.Engine
             component.Parent = this;
             components.Add(component);
         }
-        void Update()
+        public void Update()
         {
             foreach(var component in components)
             {

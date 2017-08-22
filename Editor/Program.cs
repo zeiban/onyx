@@ -25,13 +25,14 @@ namespace Onyx.Editor
             };
             form.ClientSize = new System.Drawing.Size(640, 480);
             D3D11Renderer renderer = new D3D11Renderer();
-
+            Scene scene = new Scene
             renderer.Initialize(form);
             Entity entity = new Entity();
             Camera camera = new Camera();
             entity.AddComponent(camera);
             RenderLoop.Run(form, () =>
             {
+                scene.Update()
                 renderer.Update(camera);
             });
 
