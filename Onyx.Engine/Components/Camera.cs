@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Onyx.Engine
+namespace Onyx.Engine.Components
 {
-    public class Camera : IComponent
+    public class Camera : Component
     {
         internal static Camera current;
         public static Camera Current { get { return current; } }

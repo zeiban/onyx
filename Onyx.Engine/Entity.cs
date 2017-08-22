@@ -8,15 +8,16 @@ namespace Onyx.Engine
 {
     public class Entity
     {
-        public List<IComponent> components = new List<IComponent>();
+        public static CreatePrimitive()
+        public List<Component> components = new List<Component>();
         public Transform transform = new Transform();
         public Entity()
         {
             components.Add(this.transform);
         }
-        public void AddComponent(IComponent component)
+        public void AddComponent(Component component)
         {
-            component.Parent = this;
+            component.entity = this;
             components.Add(component);
         }
         public void Update()

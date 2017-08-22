@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Onyx.Engine
 {
-    public class Transform : IComponent
+    public class Transform : Component
     {
         private Matrix localMatrix;
         public  Matrix worldMatrix;

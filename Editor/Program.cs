@@ -1,4 +1,5 @@
 ﻿using Onyx.Engine;
+using Onyx.Engine.Components;
 using SharpDX.Windows;
 using System;
 using System.Collections.Generic;
@@ -27,9 +28,16 @@ namespace Onyx.Editor
             D3D11Renderer renderer = new D3D11Renderer();
             Scene scene = new Scene
             renderer.Initialize(form);
-            Entity entity = new Entity();
+            Entity entity;
+            entity = new Entity();
             Camera camera = new Camera();
             entity.AddComponent(camera);
+
+            entity = new Entity();
+            MeshRenderer meshRenderer = new MeshRenderer();
+            //meshRenderer.mesh = new Mesh
+            //entity.AddComponent(meshRenderer);
+
             RenderLoop.Run(form, () =>
             {
                 scene.Update()
