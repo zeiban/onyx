@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Onyx.Engine.Components
 {
-    public sealed class MeshRenderer : Component
+    public sealed class MeshReference : Component
     {
-        public MeshRenderer() { }
+        public MeshReference() { }
+        public Mesh Mesh { get; set; }
+
         public override void Update()
         {
             throw new NotImplementedException();

@@ -166,7 +166,7 @@ namespace Onyx.Engine
             return true;
         }
 
-        public void Update(Entity camera)
+        public void Update(Camera camera)
         {
             if (userResized)
             {

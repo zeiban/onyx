@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Onyx.Engine
 {
-    enum PrimitiveType
+    public enum PrimitiveType
     {
         Cube
     }
