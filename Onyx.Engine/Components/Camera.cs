@@ -17,8 +17,8 @@ namespace Onyx.Engine.Components
         public Rectangle location;
         public Camera()
         {
-            if (current != null)
-                Camera.current = this;
+            if (current == null)
+                current = this;
         }
         public override void Update()
         {

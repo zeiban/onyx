@@ -219,10 +219,11 @@ namespace Onyx.Engine
                 context.ClearRenderTargetView(renderTarget, *(RawColor4*)&col);
             }
             swapChain.Present(0, PresentFlags.None);
-            Matrix.Translation(0.0f, 0.0f, 5.0f, out viewMatrix);
-            Camera.Current.Update();
+//            Matrix.Translation(0.0f, 0.0f, 5.0f, out viewMatrix);
+            //Camera.Current.Update();
 //            Matrix.Multiply(ref camera.Parent.transform.worldMatrix, ref camera.projectionMatrix, out viewProjMatrix);
-            Matrix.Multiply(ref viewMatrix, ref Camera.Current.projectionMatrix, out viewProjMatrix);
+            //Matrix.Multiply(ref viewMatrix, ref Camera.Current.projectionMatrix, out viewProjMatrix);
+            Matrix.Multiply(ref Camera.Current.Entity.Transform.worldMatrix, ref Camera.Current.projectionMatrix, out viewProjMatrix);
             context.ClearDepthStencilView(depthView, DepthStencilClearFlags.Depth, 1.0f, 0);
             context.ClearRenderTargetView(renderView, Color.Black);
 

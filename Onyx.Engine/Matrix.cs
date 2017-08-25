@@ -195,9 +195,56 @@ namespace Onyx.Engine
             result = temp;
         }
 
+        public static void RotationQuaternion(ref Quaternion rotation, out Matrix result)
+        {
+            float xx = rotation.X * rotation.X;
+            float yy = rotation.Y * rotation.Y;
+            float zz = rotation.Z * rotation.Z;
+            float xy = rotation.X * rotation.Y;
+            float zw = rotation.Z * rotation.W;
+            float zx = rotation.Z * rotation.X;
+            float yw = rotation.Y * rotation.W;
+            float yz = rotation.Y * rotation.Z;
+            float xw = rotation.X * rotation.W;
+
+            result = Matrix.Identity;
+            result.M11 = 1.0f - (2.0f * (yy + zz));
+            result.M12 = 2.0f * (xy + zw);
+            result.M13 = 2.0f * (zx - yw);
+            result.M21 = 2.0f * (xy - zw);
+            result.M22 = 1.0f - (2.0f * (zz + xx));
+            result.M23 = 2.0f * (yz + xw);
+            result.M31 = 2.0f * (zx + yw);
+            result.M32 = 2.0f * (yz - xw);
+            result.M33 = 1.0f - (2.0f * (yy + xx));
+        }
+
         public void Transpose()
         {
             Transpose(ref this, out this);
+        }
+
+        public Vector3 Forward
+        {
+            get
+            {
+                Vector3 v;
+                v.X = M31;
+                v.Y = M32;
+                v.Z = M33;
+                return v;
+            }
+        }
+        public Vector3 Left
+        {
+            get
+            {
+                Vector3 v;
+                v.X = -M11;
+                v.Y = -M12;
+                v.Z = -M13;
+                return v;
+            }
         }
     }
 }

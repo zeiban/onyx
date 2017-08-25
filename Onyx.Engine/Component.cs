@@ -8,8 +8,7 @@ namespace Onyx.Engine
 {
     public abstract class Component
     {
-        internal Entity entity;
-        public Entity Entity { get { return entity; } }
+        public Entity Entity { get; internal set; }
         public abstract void Update();
     }
 }

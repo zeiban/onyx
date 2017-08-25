@@ -13,7 +13,6 @@ namespace Onyx.Engine.Components
 
         public override void Update()
         {
-            throw new NotImplementedException();
         }
     }
 }

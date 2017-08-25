@@ -9,9 +9,10 @@ namespace Onyx.Engine.Components
     public sealed class MeshRenderer : Component
     {
         public MeshRenderer() { }
+        private MeshReference meshRef;
         public override void Update()
         {
-            throw new NotImplementedException();
+            meshRef = Entity.GetComponent<MeshReference>();
         }
     }
 }
